@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Leonardo Augusto | FIAP">
+        
+		<title>Gulliver Traveller</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+		<!------ Menu ------>
+		<header>
+			<a href="index.html" class="title">
+				<img src="images/logo_menu.png" alt="logo_traveller">
+			</a>
+			<ul class="menu">
+				<li><i class="fas fa-user-circle"></i></li>
+			</ul>
+		</header>
+		<main>
+			<h1 class="main-tittle">Cadastro de ponto turístico</h1>
+			<div class="main-content">
+				<form method="POST" action="" id="dados" name="dados">
+
+					<!----- Ponto ----->
+					<label>Digite o nome do ponto turístico</label>
+					<input type="text" required>
+
+					<!--- Descrição --->
+					<label>Descrição</label>
+					<textarea rows="4" cols="50"></textarea>
+
+					<!---- Contatos ---->
+					<fieldset>
+						<legend>Contatos</legend>
+
+						<label>Telefone</label>
+						<input type="text" placeholder="exemplo.:(11)1234-5678">
+
+						<label>WhatsApp</label>
+						<input type="text" placeholder="exemplo.:(11)12345-6789">
+
+						<label>E-mail</label>
+						<input type="email">
+					</fieldset>
+
+					<!---- Endereço ---->
+					<fieldset>
+						<legend>Endereço</legend>
+
+						<div class="row">
+							<div class="col-2">
+								<label>CEP</label>
+								<input type="text" required>
+							</div>
+							<div class="col-6">
+								<label>Endereço</label>
+								<input type="text" required>
+							</div>
+							<div class="col-2">
+								<label>Número</label>
+								<input type="text">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<label>Bairro</label>
+								<input type="text">
+							</div>
+							<div class="col-6">
+								<label>Localidade</label>
+								<input type="text">
+							</div>
+							<div class="col-2">
+								<label>UF</label>
+								<input type="text">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6">
+								<label>Cidade</label>
+								<select>
+									<option>Selecione...</option>
+									<option value="AC">Acre</option>
+									<option value="AL">Alagoas</option>
+									<option value="AP">Amapá</option>
+									<option value="AM">Amazonas</option>
+									<option value="BA">Bahia</option>
+									<option value="CE">Ceará</option>
+									<option value="DF">Distrito Federal</option>
+									<option value="ES">Espírito Santo</option>
+									<option value="GO">Goiás</option>
+									<option value="MA">Maranhão</option>
+									<option value="MT">Mato Grosso</option>
+									<option value="MS">Mato Grosso do Sul</option>
+									<option value="MG">Minas Gerais</option>
+									<option value="PA">Pará</option>
+									<option value="PB">Paraíba</option>
+									<option value="PR">Paraná</option>
+									<option value="PE">Pernambuco</option>
+									<option value="PI">Piauí</option>
+									<option value="RJ">Rio de Janeiro</option>
+									<option value="RN">Rio Grande do Norte</option>
+									<option value="RS">Rio Grande do Sul</option>
+									<option value="RO">Rondônia</option>
+									<option value="RR">Roraima</option>
+									<option value="SC">Santa Catarina</option>
+									<option value="SP">São Paulo</option>
+									<option value="SE">Sergipe</option>
+									<option value="TO">Tocantins</option>
+								</select>
+							</div>
+							<div class="col-6">
+								<label>Estado</label>
+								<select>
+									<option>Selecione...</option>
+									<option value="AC">AC</option>
+									<option value="AL">AL</option>
+									<option value="AP">AP</option>
+									<option value="AM">AM</option>
+									<option value="BA">BA</option>
+									<option value="CE">CE</option>
+									<option value="DF">DF</option>
+									<option value="ES">ES</option>
+									<option value="GO">GO</option>
+									<option value="MA">MA</option>
+									<option value="MT">MT</option>
+									<option value="MS">MS</option>
+									<option value="MG">MG</option>
+									<option value="PA">PA</option>
+									<option value="PB">PB</option>
+									<option value="PR">PR</option>
+									<option value="PE">PE</option>
+									<option value="PI">PI</option>
+									<option value="RJ">RJ</option>
+									<option value="RN">RN</option>
+									<option value="RS">RS</option>
+									<option value="RO">RO</option>
+									<option value="RR">RR</option>
+									<option value="SC">SC</option>
+									<option value="SP">SP</option>
+									<option value="SE">SE</option>
+									<option value="TO">TO</option>
+								</select>
+							</div>
+						</div>
+					</fieldset>
+
+					<!------ Foto ------>
+					<fieldset>
+						<legend>Fotos</legend>
+
+						<label>Selecione uma imagem...</label>
+						<input type="file">
+					</fieldset>
+
+
+					<!---- Horário ---->
+					<fieldset>
+						<legend>Funcionamento</legend>
+
+						<table>
+							<tr class="text-center">
+								<td>
+									<input type="checkbox" id="scales" name="scales">
+									<label for="scales">Domingo</label>
+								</td>
+								<td>
+									<label>Entrada</label>
+									<input type="time">
+								</td>
+								<td>
+									<label>Saída</label>
+									<input type="time">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="scales" name="scales">
+									<label for="scales">Segunda</label>
+								</td>
+								<td>
+									<label>Entrada</label>
+									<input type="time">
+								</td>
+								<td>
+									<label>Saída</label>
+									<input type="time">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="scales" name="scales">
+									<label for="scales">Terça</label>
+								</td>
+								<td>
+									<label>Entrada</label>
+									<input type="time">
+								</td>
+								<td>
+									<label>Saída</label>
+									<input type="time">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="scales" name="scales">
+									<label for="scales">Quarta</label>
+								</td>
+								<td>
+									<label>Entrada</label>
+									<input type="time">
+								</td>
+								<td>
+									<label>Saída</label>
+									<input type="time">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="scales" name="scales">
+									<label for="scales">Quinta</label>
+								</td>
+								<td>
+									<label>Entrada</label>
+									<input type="time">
+								</td>
+								<td>
+									<label>Saída</label>
+									<input type="time">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="scales" name="scales">
+									<label for="scales">Sexta</label>
+								</td>
+								<td>
+									<label>Entrada</label>
+									<input type="time">
+								</td>
+								<td>
+									<label>Saída</label>
+									<input type="time">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="scales" name="scales">
+									<label for="scales">Sábado</label>
+								</td>
+								<td>
+									<label>Entrada</label>
+									<input type="time">
+								</td>
+								<td>
+									<label>Saída</label>
+									<input type="time">
+								</td>
+							</tr>
+						</table>
+					</fieldset>
+
+					<!---- Entrada ---->
+					<fieldset>
+						<legend>Entrada\Ingresso</legend>
+
+						<div class="row">
+							<div class="col-4">
+								<label>Adunto</label>
+								<input type="text" placeholder="R$ 0,00">
+							</div>
+							<div class="col-4">
+								<label>Criança</label>
+								<input type="text" placeholder="R$ 0,00">
+							</div>
+							<div class="col-4">
+								<label>Idoso</label>
+								<input type="text" placeholder="R$ 0,00">
+							</div>
+						</div>
+					</fieldset>
+					
+					<!----- Outros ----->
+					<div class="col-4">
+						<label>Pet Friendly?</label>
+						<div>
+							<input type="radio" id="sim" name="fav_language" value="SIM">
+							<label for="sim">Sim</label><br>
+							<input type="radio" id="css" name="fav_language" value="CSS">
+							<label for="css">Não</label><br>
+						</div>
+					</div>
+
+					<!----- Botão ----->
+					<input type="submit" value="Salvar">
+				</form>
+			</div>
+		</main>
+		<footer>
+			Leonardo Augusto | Gulliver Traveller - <strong>&copy;2022</strong>
+		</footer>
+	</body>
+</html>

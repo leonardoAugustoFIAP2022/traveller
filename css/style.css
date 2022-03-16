@@ -1,0 +1,196 @@
+html {
+    height: 100%
+}
+
+body {
+	background-image: url('../images/fundo_wave_2.png');
+    background-position: center center;
+    background-size: cover;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+	font-family: Arial, Helvetica, sans-serif
+}
+
+a {
+	text-decoration: none
+}
+
+h1 {
+	font-size: 20px;
+	font-weight: 200
+}
+
+p {
+	max-width: 500px;
+	line-height: 20px
+}
+
+label {
+	color: #000;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 28px
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	margin-right: -15px;
+	margin-left: -15px
+}
+
+.col-2 {
+	width: 25%;
+	padding-right: 15px;
+	padding-left: 15px
+}
+
+.col-4 {
+	width: 50%;
+	padding-right: 15px;
+	padding-left: 15px
+}
+
+.col-6 {
+	width: 75%;
+	padding-right: 15px;
+	padding-left: 15px
+}
+
+.col-8 {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px
+}
+
+/*********** Menu ***********/
+header {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background: transparent;
+	z-index: 1;
+}
+header .title {
+	flex-direction: column;
+	padding: 10px 18px;
+	box-sizing: border-box
+}
+header a.title {
+	color: #FFF
+}
+header a.title:hover {
+	color: #9396A3
+}
+header a.title img {
+	width: 120px;
+	height: 40px;
+}
+header ul.menu li {
+	display: inline-block;
+	margin: 6px 12px;
+	font-size: 13px;
+}
+header ul.menu li i {
+	margin-right: 10px;
+	color: #FFF;
+	font-size: 30px;
+}
+header ul.menu li a {
+	color: #FFF
+}
+header ul.menu li a:hover {
+	color: #9396A3;
+	transition: 0.3s all
+}
+/****************************/
+
+/********* Conteúdo *********/
+main {
+	max-width: 1100px;
+	margin: 70px auto 0 auto;
+	padding: 30px;
+	box-sizing: border-box;
+	background-color: #FFF;
+	border-top-right-radius: 12px;
+	border-top-left-radius: 12px
+}
+main .main-tittle {
+	font-size: 20px;
+	font-weight: 200;
+	text-align: center;
+	color: #0B5ED8;
+	text-transform: uppercase;
+}
+main .main-content {
+	display: flex;
+	align-items: baseline;
+}
+main .main-content form {
+	margin: 0 auto
+}
+/****************************/
+
+/********* Fieldset *********/
+fieldset {
+	margin-bottom: 20px;
+	border: solid 1px #CACFD2;
+	border-radius: 8px
+}
+/****************************/
+
+/********** Inputs **********/
+input[type=text],
+input[type=date],
+input[type=time],
+input[type=email],
+input[type=file],
+textarea,
+select {
+	width: 100%;
+	padding: 12px;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+	display: inline-block;
+	border: 1px solid rgba(23, 27, 43);
+	border-radius: 4px;
+	box-sizing: border-box
+}
+
+input[type=radio] {
+	margin-bottom: 15px;
+	color: #000
+}
+
+input[type=submit] {
+	width: 30%;
+	float: right;
+	margin: 8px 0;
+	padding: 14px 20px;
+	box-sizing: border-box;
+	background-color: #0B5ED8;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2)
+}
+
+input[type=submit]:hover {
+	background-color: #0954C2
+}
+/****************************/
+
+/********** Footer **********/
+footer {
+	padding: 16px;
+	box-sizing: border-box;
+	bottom: 0;
+	text-align: center
+}
+/****************************/
