@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Leonardo Augusto | FIAP">
+        
+		<title>Traveller | Cadastro</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+
+        <!------ Menu ------>
+        <header>
+            <div class="header-logo">
+                <a href="../index.html">
+                    <img src="../images/logo_menu.png" alt="menu-logo">
+                </a>
+            </div>
+            <nav class="header-menu">
+                <ul class="menu">
+                    <li><a href="hoteis.html">Hotéis</a></li>
+                    <li><a href="cadastro.html" id="cadastro">Cadastro</a></li>
+                </ul>
+				<ul class="toggle-menu">
+                    <li><a href="#"><i class="fas fa-bars"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+
+		<!---- Cadastro ---->
+		<main class="main-pages">
+			<article class="cadastro">
+				<h1>Cadastro</h1>
+
+				<form method="POST" action="" id="dados" name="dados">
+					<div class="row">
+
+						<!----- Ponto ----->
+						<div class="col-6">
+							<label>Digite o nome do ponto turístico</label>
+							<input type="text" class="form-input" required>
+						</div>
+
+						<!--- Categoria --->
+						<div class="col-6">
+							<label>Categoria</label>
+							<select class="form-input" required>
+								<option>Selecione...</option>
+								<option value="1">Aluguel de carros</option>
+								<option value="2">Cultura</option>
+								<option value="3">Entretenimento</option>
+								<option value="4">Gastronomia</option>
+								<option value="5">História</option>
+								<option value="6">Hotéis</option>
+								<option value="7">Parques</option>
+								<option value="8">Vida noturna</option>
+							</select>
+						</div>
+					</div>
+
+					<!--- Descrição --->
+					<label>Descrição</label>
+					<textarea rows="4" cols="50" class="form-input"></textarea>
+
+					<!---- Contatos ---->
+					<fieldset>
+						<legend>Contatos</legend>
+						<div class="row">
+							<div class="col-4">
+								<label>Telefone</label>
+								<input type="text" class="form-input" placeholder="Tel.:(__)____-____">
+							</div>
+							<div class="col-4">
+								<label>WhatsApp</label>
+								<input type="text" class="form-input" placeholder="Tel.:(__)_____-____">
+							</div>
+							<div class="col-4">
+								<label>E-mail</label>
+								<input type="email" class="form-input">
+							</div>
+						</div>
+					</fieldset>
+
+					<!---- Endereço ---->
+					<fieldset>
+						<legend>Endereço</legend>
+						<div class="row">
+							<div class="col-2">
+								<label>CEP</label>
+								<input type="text" class="form-input" placeholder="_____-___" required>
+							</div>
+							<div class="col-8">
+								<label>Endereço</label>
+								<input type="text" class="form-input" required>
+							</div>
+							<div class="col-2">
+								<label>Número</label>
+								<input type="text" class="form-input">
+							</div>
+							<div class="col-6">
+								<label>Bairro</label>
+								<input type="text" class="form-input">
+							</div>
+							<div class="col-6">
+								<label>Localidade</label>
+								<input type="text" class="form-input">
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-6">
+								<label>Cidade</label>
+								<select class="form-input">
+									<option>Selecione...</option>
+									<option value="AC">Acre</option>
+									<option value="AL">Alagoas</option>
+									<option value="AP">Amapá</option>
+									<option value="AM">Amazonas</option>
+									<option value="BA">Bahia</option>
+									<option value="CE">Ceará</option>
+									<option value="DF">Distrito Federal</option>
+									<option value="ES">Espírito Santo</option>
+									<option value="GO">Goiás</option>
+									<option value="MA">Maranhão</option>
+									<option value="MT">Mato Grosso</option>
+									<option value="MS">Mato Grosso do Sul</option>
+									<option value="MG">Minas Gerais</option>
+									<option value="PA">Pará</option>
+									<option value="PB">Paraíba</option>
+									<option value="PR">Paraná</option>
+									<option value="PE">Pernambuco</option>
+									<option value="PI">Piauí</option>
+									<option value="RJ">Rio de Janeiro</option>
+									<option value="RN">Rio Grande do Norte</option>
+									<option value="RS">Rio Grande do Sul</option>
+									<option value="RO">Rondônia</option>
+									<option value="RR">Roraima</option>
+									<option value="SC">Santa Catarina</option>
+									<option value="SP">São Paulo</option>
+									<option value="SE">Sergipe</option>
+									<option value="TO">Tocantins</option>
+								</select>
+							</div>
+							<div class="col-6">
+								<label>Estado</label>
+								<select class="form-input">
+									<option>Selecione...</option>
+									<option value="AC">AC</option>
+									<option value="AL">AL</option>
+									<option value="AP">AP</option>
+									<option value="AM">AM</option>
+									<option value="BA">BA</option>
+									<option value="CE">CE</option>
+									<option value="DF">DF</option>
+									<option value="ES">ES</option>
+									<option value="GO">GO</option>
+									<option value="MA">MA</option>
+									<option value="MT">MT</option>
+									<option value="MS">MS</option>
+									<option value="MG">MG</option>
+									<option value="PA">PA</option>
+									<option value="PB">PB</option>
+									<option value="PR">PR</option>
+									<option value="PE">PE</option>
+									<option value="PI">PI</option>
+									<option value="RJ">RJ</option>
+									<option value="RN">RN</option>
+									<option value="RS">RS</option>
+									<option value="RO">RO</option>
+									<option value="RR">RR</option>
+									<option value="SC">SC</option>
+									<option value="SP">SP</option>
+									<option value="SE">SE</option>
+									<option value="TO">TO</option>
+								</select>
+							</div>
+						</div>
+					</fieldset>
+
+					<!------ Foto ------>
+					<fieldset>
+						<legend>Fotos</legend>
+						<label>Selecione uma imagem...</label>
+						<input type="file" class="form-input">
+					</fieldset>
+
+
+					<!---- Horário ---->
+					<fieldset>
+						<legend>Funcionamento</legend>
+						<table>
+							<tr>
+								<td>
+									<input type="checkbox" id="scales" name="scales">
+									<label for="scales">Domingo</label>
+								</td>
+								<td>
+									<label>Entrada</label>
+									<input type="time">
+								</td>
+								<td>
+									<label>Saída</label>
+									<input type="time">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="scales" name="scales">
+									<label for="scales">Segunda</label>
+								</td>
+								<td>
+									<label>Entrada</label>
+									<input type="time">
+								</td>
+								<td>
+									<label>Saída</label>
+									<input type="time">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="scales" name="scales">
+									<label for="scales">Terça</label>
+								</td>
+								<td>
+									<label>Entrada</label>
+									<input type="time">
+								</td>
+								<td>
+									<label>Saída</label>
+									<input type="time">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="scales" name="scales">
+									<label for="scales">Quarta</label>
+								</td>
+								<td>
+									<label>Entrada</label>
+									<input type="time">
+								</td>
+								<td>
+									<label>Saída</label>
+									<input type="time">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="scales" name="scales">
+									<label for="scales">Quinta</label>
+								</td>
+								<td>
+									<label>Entrada</label>
+									<input type="time">
+								</td>
+								<td>
+									<label>Saída</label>
+									<input type="time">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="scales" name="scales">
+									<label for="scales">Sexta</label>
+								</td>
+								<td>
+									<label>Entrada</label>
+									<input type="time">
+								</td>
+								<td>
+									<label>Saída</label>
+									<input type="time">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="scales" name="scales">
+									<label for="scales">Sábado</label>
+								</td>
+								<td>
+									<label>Entrada</label>
+									<input type="time">
+								</td>
+								<td>
+									<label>Saída</label>
+									<input type="time">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="scales" name="scales">
+									<label for="scales">Feriados</label>
+								</td>
+								<td>
+									<label>Entrada</label>
+									<input type="time">
+								</td>
+								<td>
+									<label>Saída</label>
+									<input type="time">
+								</td>
+							</tr>
+						</table>
+					</fieldset>
+
+					<!---- Entrada ---->
+					<fieldset>
+						<legend>Entrada\Ingresso</legend>
+						<div class="row">
+							<div class="col-4">
+								<label>Adulto</label>
+								<input type="text" class="form-input" placeholder="R$ 0,00">
+							</div>
+							<div class="col-4">
+								<label>Criança</label>
+								<input type="text" class="form-input" placeholder="R$ 0,00">
+							</div>
+							<div class="col-4">
+								<label>Idoso</label>
+								<input type="text" class="form-input" placeholder="R$ 0,00">
+							</div>
+						</div>
+					</fieldset>
+					
+					<!----- Botão ----->
+					<div class="form-button">
+						<input type="submit" value="Salvar" class="btn btn-blue">
+					</div>
+				</form>
+			</article>
+		</main>
+
+		<!----- Footer ----->
+		<footer>
+			<p>Leonardo Augusto | FIAP &copy;2022 - Todos os direitos reservados.</p>
+			<i class="fab fa-facebook-square"></i>
+			<i class="fab fa-instagram"></i>
+		</footer>
+	</body>
+</html>

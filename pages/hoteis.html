@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Leonardo Augusto | FIAP">
+		<title>Traveller | Hotéis</title>
+
+        <!-- CSS only -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+
+        <!------ Menu ------>
+        <header>
+            <div class="header-logo">
+                <a href="../index.html">
+                    <img src="../images/logo_menu.png" alt="menu-logo">
+                </a>
+            </div>
+            <nav class="header-menu">
+                <ul class="menu">
+                    <li><a href="hoteis.html">Hotéis</a></li>
+                    <li><a href="cadastro.html" id="cadastro">Cadastro</a></li>
+                </ul>
+				<ul class="toggle-menu">
+                    <li><a href="#"><i class="fas fa-bars"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+
+		<main class="main-pages">
+
+            <!----- Buscar ----->
+            <article class="buscar">
+                <form method="POST" action="" id="dados" name="dados">
+                    <div class="buscar-tipo-viagem">
+                        <h4>Selecione o tipo de viagem:</h4>
+
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html">Trabalho</label>
+
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label for="css">Negócio</label>
+
+                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                        <label for="javascript">Turismo</label>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <label>Origem</label>
+                            <input type="text" class="form-input" placeholder="De onde vair sair?">
+                        </div>
+                        <div class="col-3">
+                            <label>Destino</label>
+                            <input type="text" class="form-input" placeholder="Para onde vai?">
+                        </div>
+                        <div class="col-3">
+                            <label>Data Ida</label>
+                            <input type="date" class="form-input">
+                        </div>
+                        <div class="col-3">
+                            <label>Data Volta</label>
+                            <input type="date" class="form-input">
+                        </div>
+                    </div>
+
+                    <!----- Botão ----->
+                    <div class="form-button">
+                        <input type="submit" value="Buscar" class="btn btn-yellow">
+                    </div>
+                </form>
+            </article>
+
+            <!----- Hotéis ----->
+            <article>
+                <h1>Hospedagem</h1>
+
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card">
+                            <figure>
+                                <a href="">
+                                    <img src="../images/hoteis/blue_tree_morumbi.jpg" alt="blue-tree-premium-morumbi">
+                                </a>
+                            </figure>
+                            <div class="card-name-rate">
+                                <h2>Blue Tree Premium Morumbi</h2>
+
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="card-info">
+                                <div class="address">
+                                    <strong>Endereço:</strong>
+                                    Av. Roque Petroni Júnior, 1000 - Vila Gertrudes, São Paulo - SP, 04707-000
+                                </div>
+                                <div class="phone">
+                                    <strong>Telefone:</strong> (11) 5187-1200
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card">
+                            <figure>
+                                <a href="">
+                                    <img src="../images/hoteis/blue_tree_paulista.jpg" alt="blue-tree-premium-paulista">
+                                </a>
+                            </figure>
+                            <div class="card-name-rate">
+                                <h2>Blue Tree Premium Paulista</h2>
+
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                            </div>
+                            <div class="card-info">
+                                <div class="address">
+                                    <strong>Endereço:</strong>
+                                    Rua Peixoto Gomide, 707 - Bela Vista, São Paulo - SP, 01409-001
+                                </div>
+                                <div class="phone">
+                                    <strong>Telefone:</strong> (11) 3147-7000
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card">
+                            <figure>
+                                <a href="">
+                                    <img src="../images/hoteis/bourbon_convention.jpg" alt="bourbon-convention-ibirapuera">
+                                </a>
+                            </figure>
+                            <div class="card-name-rate">
+                                <h2>Bourbon Convention Ibirapuera</h2>
+
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                            </div>
+                            <div class="card-info">
+                                <div class="address">
+                                    <strong>Endereço:</strong>
+                                    Av. Ibirapuera, 2927 - Ibirapuera, São Paulo - SP, 04029-200
+                                </div>
+                                <div class="phone">
+                                    <strong>Telefone:</strong> (11) 2161-2200
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card">
+                            <figure>
+                                <a href="">
+                                    <img src="../images/hoteis/comfort_ibirapuera.jpg" alt="confort-ibirapuera">
+                                </a>
+                            </figure>
+                            <div class="card-name-rate">
+                                <h2>Comfort Ibirapuera</h2>
+
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="card-info">
+                                <div class="address">
+                                    <strong>Endereço:</strong>
+                                    Av. Sabiá, 825 - Indianópolis, São Paulo - SP, 04515-001
+                                </div>
+                                <div class="phone">
+                                    <strong>Telefone:</strong> (11) 4673-0255
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card">
+                            <figure>
+                                <a href="">
+                                    <img src="../images/hoteis/golden_tulip_paulista.jpg" alt="golden-tulip-paulista-plaza">
+                                </a>
+                            </figure>
+                            <div class="card-name-rate">
+                                <h2>Golden Tulip Paulista Plaza</h2>
+
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                            </div>
+                            <div class="card-info">
+                                <div class="address">
+                                    <strong>Endereço:</strong>
+                                    Alameda Santos, 85 - Jardins, São Paulo - SP, 01419-000
+                                </div>
+                                <div class="phone">
+                                    <strong>Telefone:</strong> (11) 2627-1000
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card">
+                            <figure>
+                                <a href="">
+                                    <img src="../images/hoteis/ibis_styles.jpg" alt="ibis-styles">
+                                </a>
+                            </figure>
+                            <div class="card-name-rate">
+                                <h2>IBIS Styles São Paulo Anhembi</h2>
+
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                            </div>
+                            <div class="card-info">
+                                <div class="address">
+                                    <strong>Endereço:</strong>
+                                    Av. Cruzeiro do Sul, 1709 - Santana, São Paulo - SP, 02031-000
+                                </div>
+                                <div class="phone">
+                                    <strong>Telefone:</strong> (11) 3336-5400
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card">
+                            <figure>
+                                <a href="">
+                                    <img src="../images/hoteis/mercure_pamplona.jpg" alt="mercure-sao-paulo-pamplina">
+                                </a>
+                            </figure>
+                            <div class="card-name-rate">
+                                <h2>Mercure São Paulo Pamplona</h2>
+
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                            </div>
+                            <div class="card-info">
+                                <div class="address">
+                                    <strong>Endereço:</strong>
+                                    R. Pamplona, 1315 - Jardim Paulista, São Paulo - SP, 01405-002
+                                </div>
+                                <div class="phone">
+                                    <strong>Telefone:</strong> (11) 2878-5500
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card">
+                            <figure>
+                                <a href="">
+                                    <img src="../images/hoteis/renaissance_sao.jpg" alt="renaissance-sao-paulo-hotel">
+                                </a>
+                            </figure>
+                            <div class="card-name-rate">
+                                <h2>Renaissance São Paulo Hotel</h2>
+
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                            </div>
+                            <div class="card-info">
+                                <div class="address">
+                                    <strong>Endereço:</strong>
+                                    Alameda Santos, 2233 - Jardim Paulista, São Paulo - SP, 01419-002
+                                </div>
+                                <div class="phone">
+                                    <strong>Telefone:</strong> (11) 3069-2233
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card">
+                            <figure>
+                                <a href="">
+                                    <img src="../images/hoteis/sheraton_WTC.jpg" alt="sheraton-sao-paulo-WTC-hotel">
+                                </a>
+                            </figure>
+                            <div class="card-name-rate">
+                                <h2>Sheraton São Paulo WTC Hotel</h2>
+
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                                <i class="far fa-star check-star"></i>
+                            </div>
+                            <div class="card-info">
+                                <div class="address">
+                                    <strong>Endereço:</strong>
+                                    Av. das Nações Unidas, 12559 - Brooklin Novo, São Paulo - SP, 04578-903
+                                </div>
+                                <div class="phone">
+                                    <strong>Telefone:</strong> (11) 3055-8000
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!---- Ver Mais ---->
+                <div class="button-right">
+                    <button class="btn btn-blue">Ver mais</button>
+                </div>
+            </article>
+		</main>
+
+		<!----- Footer ----->
+		<footer>
+			<p>Leonardo Augusto | FIAP &copy;2022 - Todos os direitos reservados.</p>
+			<i class="fab fa-facebook-square"></i>
+			<i class="fab fa-instagram"></i>
+		</footer>
+	</body>
+</html>

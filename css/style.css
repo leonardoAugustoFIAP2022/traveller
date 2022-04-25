@@ -1,28 +1,25 @@
-html {
-    height: 100%
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth
 }
 
 body {
-	background-image: url('../images/fundo_wave_2.png');
-    background-position: center center;
-    background-size: cover;
-    background-position-y: 0px;
-    background-repeat: no-repeat;
-	font-family: Arial, Helvetica, sans-serif
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F3F5F8;
+    overflow-x: hidden
 }
 
 a {
 	text-decoration: none
 }
 
-h1 {
-	font-size: 20px;
-	font-weight: 200
-}
-
 p {
-	max-width: 500px;
-	line-height: 20px
+    color: #000
+    /*text-indent: 3ch*/
 }
 
 label {
@@ -32,165 +29,425 @@ label {
 	line-height: 28px
 }
 
-.row {
-	display: flex;
-	flex-direction: row;
-	margin-right: -15px;
-	margin-left: -15px
+fieldset {
+	margin-bottom: 20px;
+    padding: 10px 20px;
+	border: solid 1px #1D262D;
+	border-radius: 8px
 }
 
+fieldset legend {
+    font-size: 12px;
+    font-weight: 600
+}
+
+/************ Row ************/
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+    flex-wrap: wrap
+}
+/****************************/
+
+/*********** Col- ***********/
+.col-2, .col-3, .col-4, .col-6, .col-12 {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px
+}
+  
 .col-2 {
-	width: 25%;
-	padding-right: 15px;
-	padding-left: 15px
+    max-width: 16.666667%;
+    flex: 0 0 16.666667%
+}
+
+.col-3 {
+    max-width: 25%;
+    flex: 0 0 25%
 }
 
 .col-4 {
-	width: 50%;
-	padding-right: 15px;
-	padding-left: 15px
+    max-width: 33.333333%;
+    flex: 0 0 33.333333%
 }
 
 .col-6 {
-	width: 75%;
-	padding-right: 15px;
-	padding-left: 15px
+    max-width: 50%;
+    flex: 0 0 50%
 }
 
 .col-8 {
-	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px
+    max-width: 66.666667%;
+    flex: 0 0 66.666667%
 }
 
-/*********** Menu ***********/
-header {
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	background: transparent;
-	z-index: 1;
-}
-header .title {
-	flex-direction: column;
-	padding: 10px 18px;
-	box-sizing: border-box
-}
-header a.title {
-	color: #FFF
-}
-header a.title:hover {
-	color: #9396A3
-}
-header a.title img {
-	width: 120px;
-	height: 40px;
-}
-header ul.menu li {
-	display: inline-block;
-	margin: 6px 12px;
-	font-size: 13px;
-}
-header ul.menu li i {
-	margin-right: 10px;
-	color: #FFF;
-	font-size: 30px;
-}
-header ul.menu li a {
-	color: #FFF
-}
-header ul.menu li a:hover {
-	color: #9396A3;
-	transition: 0.3s all
-}
-/****************************/
-
-/********* Conteúdo *********/
-main {
-	max-width: 1100px;
-	margin: 70px auto 0 auto;
-	padding: 30px;
-	box-sizing: border-box;
-	background-color: #FFF;
-	border-top-right-radius: 12px;
-	border-top-left-radius: 12px
-}
-main .main-tittle {
-	font-size: 20px;
-	font-weight: 200;
-	text-align: center;
-	color: #0B5ED8;
-	text-transform: uppercase;
-}
-main .main-content {
-	display: flex;
-	align-items: baseline;
-}
-main .main-content form {
-	margin: 0 auto
-}
-/****************************/
-
-/********* Fieldset *********/
-fieldset {
-	margin-bottom: 20px;
-	border: solid 1px #CACFD2;
-	border-radius: 8px
+.col-12 {
+    max-width: 100%;
+    flex: 0 0 100%
 }
 /****************************/
 
 /********** Inputs **********/
-input[type=text],
-input[type=date],
-input[type=time],
-input[type=email],
-input[type=file],
-textarea,
-select {
-	width: 100%;
-	padding: 12px;
-	box-sizing: border-box;
-	margin-bottom: 15px;
-	display: inline-block;
-	border: 1px solid rgba(23, 27, 43);
-	border-radius: 4px;
-	box-sizing: border-box
+.form-input {
+    display: block;
+    width: 100%;
+    height: 42px;
+    margin-bottom: 12px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #495057;
+    background-color: #FFF;
+    border: 1px solid #B3B6B7;
+    border-radius: 0.25rem
+}
+.form-input:focus {
+    border-color: #0B5ED8;
+    outline: 0
+}
+.form-input::placeholder {
+    color: #6c757d;
+    font-size: .9rem;
+    opacity: 1
 }
 
-input[type=radio] {
-	margin-bottom: 15px;
-	color: #000
+textarea.form-input {
+    min-height: 100px;
 }
+/****************************/
 
-input[type=submit] {
-	width: 30%;
-	float: right;
-	margin: 8px 0;
+/********** Button **********/
+.btn {
+    width: 140px;
+	margin: 2px 0;
 	padding: 14px 20px;
-	box-sizing: border-box;
-	background-color: #0B5ED8;
-	color: white;
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
-	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 8px 12px -8px #000
 }
 
-input[type=submit]:hover {
-	background-color: #0954C2
+.btn-green {
+    color: #FFF;
+	background-color: #0FB7BA;
+	border: none
+}
+.btn-green:hover {
+    background-color: #0DA4A7
+}
+
+.btn-blue {
+    color: #FFF;
+	background-color: #0B5ED8;
+	border: none
+}
+.btn-blue:hover {
+    background-color: #0954C2
+}
+
+.btn-yellow {
+    color: #000;
+	background-color: #F7DC6F;
+	border: none
+}
+.btn-yellow:hover {
+    background-color: #DEC663
+}
+
+.btn-red {
+    color: #FFF;
+	background-color: #C70039;
+	border: none
+}
+.btn-red:hover {
+    background-color: #B30033
+}
+
+.btn-white {
+    color: #000;
+	background-color: #FFF;
+	border: none
+}
+.btn-white:hover {
+    color: #000;
+    background-color: #E5E5E5
+}
+/****************************/
+
+/*********** Menu ***********/
+header {
+	position: sticky;
+	top: 0;
+	right: 0;
+	left: 0;
+    padding: 4px 60px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #283747;
+	z-index: 1
+}
+
+header .header-logo {
+	flex-direction: column;
+	box-sizing: border-box
+}
+header .header-logo a {
+    color: #FFF;
+    font-size: 22px
+}
+header .header-logo img {
+    width: 110px
+}
+
+header .header-menu ul li {
+	display: inline-block;
+	margin: 6px;
+	font-size: 13px
+}
+
+header .header-menu ul li a {
+    text-decoration: none;
+    color: #FFF;
+    padding: 8px;
+    transform: 2ms ease-in;
+    position: relative
+}
+header .header-menu ul li a:before {
+    content: ' ';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: #F7DC6F;
+    transition: all 1.5s ease
+}
+header .header-menu ul li a:hover:before {
+    width: 100%
+}
+
+header .header-menu #cadastro {
+    color: #F7DC6F;
+    border: 2px solid #F7DC6F;
+    border-radius: 4px
+}
+header .header-menu #cadastro:hover {
+    color: #000;
+    background-color: #F7DC6F
+}
+header .header-menu #cadastro:before {
+    background-color: transparent
+}
+
+header .header-menu ul.toggle-menu {
+    display: none
+}
+header .header-menu ul.toggle-menu i {
+    font-size: 28px
+}
+/****************************/
+
+/*********** Main ***********/
+.main-home,
+.main-pages {
+    max-width: 1120px;
+    margin: 0 auto;
+    background-color: #FFF;
+    box-shadow: 0 8px 20px 0 rgb(158 184 209 / 43%)
+}
+
+.main-home form,
+.main-pages form {
+    padding: 10px 0
+}
+
+.main-home form .form-button,
+.main-pages form .form-button {
+    float: right
+}
+/****************************/
+
+/********** Section *********/
+.section-home {
+    position: absolute;
+	top: 58px;
+    right: 0;
+    left: 0;
+    height: 460px;
+    text-align: center;
+    background-image: url('../images/fundo_2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 20px 0 rgb(158 184 209 / 43%)
+}
+
+.section-home h1 {
+    margin-top: 140px;
+    color: #000
+}
+
+.section-home p {
+    margin: 20px 10%;
+    color: #000
+}
+
+.section-home-content {
+    margin-top: 480px
+}
+/****************************/
+
+/********** Article *********/
+article {
+    margin-bottom: 0;
+    padding: 20px 40px 80px 40px;
+}
+
+article h1 {
+    margin: 20px 0;
+    color: #1D262D;
+    font-size: 26px;
+    border-bottom: 1px solid #1D262D
+}
+
+article.buscar {
+    background-color: #F2F3F4
+}
+
+article.buscar .buscar-tipo-viagem {
+    margin-bottom: 8px;
+    border-bottom: 1px solid #D0D3D4
+}
+
+article.buscar .buscar-tipo-viagem label {
+    margin-right: 16px
+}
+
+article.cadastro form {
+    width: 900px;
+    margin: 0 auto
+}
+
+article .button-right {
+    float: right
+}
+/****************************/
+
+/*********** Card ***********/
+.card {
+    min-height: 312px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    box-shadow: 0px 10px 12px -6px rgba(0,0,0,0.4)
+}
+
+.card img {
+    width: 100%;
+    height: 122px;
+    margin-bottom: 8px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px
+}
+
+.card h2 {
+    margin-bottom: 4px;
+    font-size: 14px
+}
+
+.card .card-name-rate {
+    text-align: center
+}
+
+.card i.check-star {
+    color: #F4D03F
+}
+
+.card .card-info {
+    padding: 16px;
+    font-size: 12px
+}
+
+.card .card-info .address, .time, .phone {
+    margin-bottom: 16px
+}
+
+.card .card-text {
+    width: 50%;
+    margin-right: 18px;
+    margin-left: 18px
 }
 /****************************/
 
 /********** Footer **********/
 footer {
-	padding: 16px;
-	box-sizing: border-box;
-	bottom: 0;
-	text-align: center
+    position: absolute;
+    width: 100%;
+    padding: 16px 28px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #212121
+}
+
+footer p {
+    margin-bottom: 8px;
+    color: #FFF
+}
+
+footer a {
+    color: #BABBA3
+}
+
+footer i {
+    margin: 0 4px;
+    color: #F7DC6F;
+    font-size: 26px
+}
+/****************************/
+
+/********** MOBILE **********/
+@media screen and (max-width: 760px) {
+
+    .row {
+        margin-right: -10px;
+        margin-left: -10px;
+        display: flex;
+        flex-direction: column
+    }
+
+    .col-2, .col-3, .col-4, .col-6, .col-12 {
+        max-width: 100%
+    }
+
+    header {
+        padding: 10px 20px 10px 40px;
+    }
+    header .header-menu .menu {
+        display: none
+    }
+    header .header-menu ul.toggle-menu {
+        display: block
+    }
+
+    section h1 {
+        margin-top: 70px
+    }
+
+    article.buscar .buscar-image {
+        display: none
+    }
+    article.buscar form {
+        width: 100%
+    }
+    
+    .card {
+        flex-direction: column
+    }
+    .card .card-text {
+        width: 92%
+    }
+    .card .card-body {
+        width: 92%
+    }
 }
 /****************************/
