@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Open+Sans&display=swap');
 
+:root {
+    --body-background: #F3F5F8;
+    --body-background-menu: #1A202E;
+    --body-background-article: #FFF;
+    --body-background-buscar: #F2F3F4;
+    --body-background-card: #FFF;
+    --body-color: #000;
+    --body-box-shadow: 0 8px 20px 0 rgb(158 184 209 / 43%)
+}
+
+.dark-mode:root {
+    --body-background: #272E48;
+    --body-background-article: #1A202E;
+    --body-background-buscar: #074197;
+    --body-background-card: #272E48;
+    --body-color: #FFF;
+    --body-box-shadow: 0
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +28,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #F3F5F8;
+    background-color: var(--body-background);
     overflow-x: hidden
 }
 
@@ -18,13 +37,12 @@ a {
 }
 
 p {
-    color: #000
-    /*text-indent: 3ch*/
+    color: var(--body-color);
 }
 
 label {
-	color: #000;
-	font-size: 12px;
+	color: var(--body-color);
+	font-size: 14px;
 	font-weight: bold;
 	line-height: 28px
 }
@@ -37,7 +55,7 @@ fieldset {
 }
 
 fieldset legend {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600
 }
 
@@ -95,7 +113,7 @@ fieldset legend {
     height: 42px;
     margin-bottom: 12px;
     padding: 10px;
-    font-size: 1rem;
+    font-size: 14px;
     color: #495057;
     background-color: #FFF;
     border: 1px solid #B3B6B7;
@@ -107,7 +125,7 @@ fieldset legend {
 }
 .form-input::placeholder {
     color: #6c757d;
-    font-size: .9rem;
+    font-size: 14px;
     opacity: 1
 }
 
@@ -185,7 +203,7 @@ header {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #283747;
+	background-color: var(--body-background-menu);
 	z-index: 1
 }
 
@@ -204,7 +222,7 @@ header .header-logo img {
 header .header-menu ul li {
 	display: inline-block;
 	margin: 6px;
-	font-size: 13px
+	font-size: 14px
 }
 
 header .header-menu ul li a {
@@ -228,13 +246,17 @@ header .header-menu ul li a:hover:before {
     width: 100%
 }
 
+header .header-menu ul li label {
+    color: #FFF;
+}
+
 header .header-menu #cadastro {
     color: #F7DC6F;
     border: 2px solid #F7DC6F;
     border-radius: 4px
 }
 header .header-menu #cadastro:hover {
-    color: #000;
+    color: var(--body-color);
     background-color: #F7DC6F
 }
 header .header-menu #cadastro:before {
@@ -255,7 +277,7 @@ header .header-menu ul.toggle-menu i {
     max-width: 1120px;
     margin: 0 auto;
     background-color: #FFF;
-    box-shadow: 0 8px 20px 0 rgb(158 184 209 / 43%)
+    box-shadow: var(--body-box-shadow)
 }
 
 .main-home form,
@@ -277,42 +299,42 @@ header .header-menu ul.toggle-menu i {
     left: 0;
     height: 460px;
     text-align: center;
-    background-image: url('../images/fundo_2.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: 0 8px 20px 0 rgb(158 184 209 / 43%)
+    background-color: var(--body-background-menu)
 }
 
 .section-home h1 {
-    margin-top: 140px;
-    color: #000
+    margin-top: 84px;
+    color: #FFF
 }
 
 .section-home p {
     margin: 20px 10%;
-    color: #000
+    color: #FFF
 }
 
-.section-home-content {
-    margin-top: 480px
+.section-home-content h1 {
+    color: #0B5ED8;
 }
 /****************************/
 
 /********** Article *********/
 article {
+    background-color: var(--body-background-article);
     margin-bottom: 0;
     padding: 20px 40px 80px 40px;
 }
 
 article h1 {
     margin: 20px 0;
-    color: #1D262D;
+    color: #0B5ED8;
     font-size: 26px;
     border-bottom: 1px solid #1D262D
 }
 
 article.buscar {
-    background-color: #F2F3F4
+    position: relative;
+    margin-top: 379px;
+    background-color: var(--body-background-buscar)
 }
 
 article.buscar .buscar-tipo-viagem {
@@ -337,8 +359,8 @@ article .button-right {
 /*********** Card ***********/
 .card {
     min-height: 312px;
-    margin-top: 18px;
-    margin-bottom: 18px;
+    margin-bottom: 36px;
+    background-color: var(--body-background-card);
     box-shadow: 0px 10px 12px -6px rgba(0,0,0,0.4)
 }
 
@@ -352,6 +374,7 @@ article .button-right {
 
 .card h2 {
     margin-bottom: 4px;
+    color: var(--body-color);
     font-size: 14px
 }
 
@@ -365,17 +388,13 @@ article .button-right {
 
 .card .card-info {
     padding: 16px;
-    font-size: 12px
+    color: var(--body-color);
+    font-size: 14px
 }
 
 .card .card-info .address, .time, .phone {
-    margin-bottom: 16px
-}
-
-.card .card-text {
-    width: 50%;
-    margin-right: 18px;
-    margin-left: 18px
+    margin-bottom: 16px;
+    color: var(--body-color)
 }
 /****************************/
 
@@ -429,8 +448,8 @@ footer i {
         display: block
     }
 
-    section h1 {
-        margin-top: 70px
+    .section-home {
+        top: 16px;
     }
 
     article.buscar .buscar-image {
