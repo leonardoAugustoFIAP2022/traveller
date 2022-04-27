@@ -7,15 +7,19 @@
     --body-background-buscar: #F2F3F4;
     --body-background-card: #FFF;
     --body-color: #000;
+    --body-input: #FFF;
+    --body-input-border: 1px solid #B3B6B7;
     --body-box-shadow: 0 8px 20px 0 rgb(158 184 209 / 43%)
 }
 
 .dark-mode:root {
-    --body-background: #272E48;
-    --body-background-article: #1A202E;
-    --body-background-buscar: #074197;
-    --body-background-card: #272E48;
-    --body-color: #FFF;
+    --body-background: #1A202E;
+    --body-background-article: #272E48;
+    --body-background-buscar: #1F2439;
+    --body-background-card: #1A202E;
+    --body-color: #BCD0F7;
+    --body-input: #1A233A;
+    --body-input-border: 1px solid #596280;
     --body-box-shadow: 0
 }
 
@@ -50,11 +54,12 @@ label {
 fieldset {
 	margin-bottom: 20px;
     padding: 10px 20px;
-	border: solid 1px #1D262D;
+	border: var(--body-input-border);
 	border-radius: 8px
 }
 
 fieldset legend {
+    color: var(--body-color);
     font-size: 14px;
     font-weight: 600
 }
@@ -114,9 +119,9 @@ fieldset legend {
     margin-bottom: 12px;
     padding: 10px;
     font-size: 14px;
-    color: #495057;
-    background-color: #FFF;
-    border: 1px solid #B3B6B7;
+    color: var(--body-color);
+    background-color: var(--body-input);
+    border: var(--body-input-border);
     border-radius: 0.25rem
 }
 .form-input:focus {
@@ -276,8 +281,7 @@ header .header-menu ul.toggle-menu i {
 .main-pages {
     max-width: 1120px;
     margin: 0 auto;
-    background-color: #FFF;
-    box-shadow: var(--body-box-shadow)
+    /*box-shadow: var(--body-box-shadow)*/
 }
 
 .main-home form,
@@ -299,17 +303,20 @@ header .header-menu ul.toggle-menu i {
     left: 0;
     height: 460px;
     text-align: center;
-    background-color: var(--body-background-menu)
+    /*background-color: var(--body-background-menu);*/
+    background-image: url('../images/fundo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .section-home h1 {
     margin-top: 84px;
-    color: #FFF
+    color: #000
 }
 
 .section-home p {
-    margin: 20px 10%;
-    color: #FFF
+    margin: 20px 20%;
+    color: #000
 }
 
 .section-home-content h1 {
@@ -319,13 +326,14 @@ header .header-menu ul.toggle-menu i {
 
 /********** Article *********/
 article {
-    background-color: var(--body-background-article);
     margin-bottom: 0;
     padding: 20px 40px 80px 40px;
+    background-color: var(--body-background-article)
 }
 
 article h1 {
     margin: 20px 0;
+    padding-bottom: 12px;
     color: #0B5ED8;
     font-size: 26px;
     border-bottom: 1px solid #1D262D
@@ -334,21 +342,23 @@ article h1 {
 article.buscar {
     position: relative;
     margin-top: 379px;
-    background-color: var(--body-background-buscar)
+    background-color: var(--body-background-buscar);
+    box-shadow: var(--body-box-shadow)
 }
 
 article.buscar .buscar-tipo-viagem {
     margin-bottom: 8px;
+    padding-bottom: 8px;
     border-bottom: 1px solid #D0D3D4
+}
+
+article.buscar .buscar-tipo-viagem h4 {
+    margin-bottom: 20px;
+    color: var(--body-color)
 }
 
 article.buscar .buscar-tipo-viagem label {
     margin-right: 16px
-}
-
-article.cadastro form {
-    width: 900px;
-    margin: 0 auto
 }
 
 article .button-right {
@@ -379,6 +389,7 @@ article .button-right {
 }
 
 .card .card-name-rate {
+    color: var(--body-color);
     text-align: center
 }
 
