@@ -1,6 +1,5 @@
-const $html = document.querySelector('html')
-const $menu = document.querySelector('#switch')
+const chk = document.getElementById('chk')
 
-$menu.addEventListener('change', function() {
-    $html.classList.toggle('dark-mode')
+chk.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode')
 })

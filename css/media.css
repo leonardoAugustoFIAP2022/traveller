@@ -1,0 +1,67 @@
+/********** MOBILE **********/
+@media screen and (max-width: 786px) {
+    .row {
+        margin-right: -10px;
+        margin-left: -10px;
+        display: flex;
+        flex-direction: column
+    }
+
+    .col-2, .col-3, .col-4, .col-6, .col-12 {
+        max-width: 100%
+    }
+
+    .section-home {
+        top: 16px;
+    }
+
+    article.buscar .buscar-image {
+        display: none
+    }
+
+    article.buscar form {
+        width: 100%
+    }
+    
+    .card {
+        flex-direction: column
+    }
+
+    .card .card-text {
+        width: 92%
+    }
+
+    .card .card-body {
+        width: 92%
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    header .header-menu {
+        position: absolute;
+        width: 50vw;
+        height: auto;
+        right: -100%;
+        background-color: red;
+        transition: all .5s
+    }
+    nav ul.show {
+        right: 0
+    }
+    header .toggle-menu {
+        position: fixed;
+        display: block;
+        padding: 8px 60px;
+        right: 18px
+    }
+    header .header-menu ul{
+        margin-top: 600px;
+    }
+    header .header-menu ul li {
+        display: block;
+        text-align: center
+    }
+}
+/****************************/

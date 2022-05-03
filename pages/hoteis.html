@@ -9,6 +9,7 @@
 		<title>Traveller | Hotéis</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/media.css">
     </head>
     <body>
         <header>
@@ -17,14 +18,28 @@
             </div>
             <nav class="header-menu">
                 <ul class="menu">
+                    <li><a href="">Aluguel de carros</a></li>
+                    <li><a href="">Cultura</a></li>
+                    <li><a href="">Entretenimento</a></li>
+					<li><a href="">Gastronomia</a></li>
+                    <li><a href="">História</a></li>
                     <li><a href="hoteis.html">Hotéis</a></li>
+                    <li><a href="">Parques</a></li>
+                    <li><a href="">Vida noturna</a></li>
                     <li><a href="cadastro.html" id="cadastro">Cadastro</a></li>
-                    <li><label for="switch"><input type="checkbox" id="switch"> Alto contraste</label></li>
-                </ul>
-				<ul class="toggle-menu">
-                    <li><a href="#"><i class="fas fa-bars"></i></a></li>
                 </ul>
             </nav>
+            <div class="dark-theme">
+                <input type="checkbox" class="checkbox" id="chk">
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <div class="toggle-menu" id="toggle-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </header>
 
 		<main class="main-pages">
@@ -302,8 +317,10 @@
         </div>
 
         <!--- Javascript --->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script type="text/javascript" src="../js/accessibility-dark-mode.js"></script>
         <script type="text/javascript" src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
         <script type="text/javascript" src="../js/accessibility-vlibras.js"></script>
+        <script type="text/javascript" src="../js/menu-toggle.js"></script>
 	</body>
 </html>

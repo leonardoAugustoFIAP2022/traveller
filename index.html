@@ -9,6 +9,7 @@
         <title>Traveller</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/media.css">
     </head>
     <body>
         <header>
@@ -17,19 +18,28 @@
             </div>
             <nav class="header-menu">
                 <ul class="menu">
+                    <li><a href="pages/">Aluguel de carros</a></li>
+                    <li><a href="pages/">Cultura</a></li>
+                    <li><a href="pages/">Entretenimento</a></li>
+					<li><a href="pages/">Gastronomia</a></li>
+                    <li><a href="pages/">História</a></li>
                     <li><a href="pages/hoteis.html">Hotéis</a></li>
+                    <li><a href="pages/">Parques</a></li>
+                    <li><a href="pages/">Vida noturna</a></li>
                     <li><a href="pages/cadastro.html" id="cadastro">Cadastro</a></li>
-                    <li>
-                        <label for="switch"><input type="checkbox" id="switch"> 
-                            <i class="fas fa-adjust"></i>
-                            Alto contraste
-                        </label>
-                    </li>
-                </ul>
-                <ul class="toggle-menu">
-                    <li><a href="#"><i class="fas fa-bars"></i></a></li>
                 </ul>
             </nav>
+            <div class="dark-theme">
+                <input type="checkbox" class="checkbox" id="chk">
+                <label class="label" for="chk">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <div class="toggle-menu" id="toggle-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </header>
 
         <!---- Conteúdo ---->
@@ -42,7 +52,7 @@
                     Repellendus laudantium, harum architecto libero deserunt doloribus eius neque,
                     nostrum ducimus voluptatem ipsum numquam eum? Quis voluptate ea molestiae!
                 </p>
-                <button class="btn btn-white">SAIBA MAIS</button>
+                <button class="btn btn-blue">SAIBA MAIS</button>
             </section>
 
             <!----- Buscar ----->
@@ -111,7 +121,7 @@
                             <div class="card">
                                 <figure>
                                     <a href="">
-                                        <img src="../images/hoteis/blue_tree_morumbi.jpg" alt="blue-tree-premium-morumbi">
+                                        <img src="images/hoteis/blue_tree_morumbi.jpg" alt="blue-tree-premium-morumbi">
                                     </a>
                                 </figure>
                                 <div class="card-name-rate">
@@ -138,7 +148,7 @@
                             <div class="card">
                                 <figure>
                                     <a href="">
-                                        <img src="../images/hoteis/blue_tree_paulista.jpg" alt="blue-tree-premium-paulista">
+                                        <img src="images/hoteis/blue_tree_paulista.jpg" alt="blue-tree-premium-paulista">
                                     </a>
                                 </figure>
                                 <div class="card-name-rate">
@@ -165,7 +175,7 @@
                             <div class="card">
                                 <figure>
                                     <a href="">
-                                        <img src="../images/hoteis/bourbon_convention.jpg" alt="bourbon-convention-ibirapuera">
+                                        <img src="images/hoteis/bourbon_convention.jpg" alt="bourbon-convention-ibirapuera">
                                     </a>
                                 </figure>
                                 <div class="card-name-rate">
@@ -205,8 +215,10 @@
         </div>
 
         <!--- Javascript --->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script type="text/javascript" src="js/accessibility-dark-mode.js"></script>
         <script type="text/javascript" src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
         <script type="text/javascript" src="js/accessibility-vlibras.js"></script>
+        <script type="text/javascript" src="js/menu-toggle.js"></script>
     </body>
 </html>
